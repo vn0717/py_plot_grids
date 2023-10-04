@@ -49,6 +49,8 @@ def find_lon_lat(distance, direction, center_lat, center_lon):
 
 
 def get_angle_dist(di, dj):
+    di = np.float64(di)
+    dj = np.float64(dj)
     hypot = np.sqrt((di**2) + (dj**2))
         
     angle = np.arctan2(dj, di)
