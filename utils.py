@@ -21,6 +21,12 @@ def get_data(string):
     else:
         return [new_string]
     
+def get_var(string):
+    start = string.find("=")
+    new_string = string[:start]
+    new_string = new_string.replace(" ", "")
+    return new_string
+    
     
 def find_lon_lat(distance, direction, center_lat, center_lon):
 
