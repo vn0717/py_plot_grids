@@ -16,7 +16,7 @@ import numpy as np
 def get_data(string):
     """
     Function that takes in a string and finds the paramter value.
-    It looks for the = and knows that after that the carachers are the
+    It looks for the = and knows that after that the characters are the
     paramter values
 
     Args:
