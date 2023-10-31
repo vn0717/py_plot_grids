@@ -111,7 +111,7 @@ def find_lon_lat(distance, direction, center_lat, center_lon):
     return new_lon, new_lat
 
 
-def get_angle_dist(di, dj):
+def get_angle_dist(di, dj, output = False):
     """
     This function finds the distance and angle of a movement based
     on the i and j components of the movement
@@ -127,14 +127,17 @@ def get_angle_dist(di, dj):
     #we need to convert to double precision to make this calculation
     di = np.float64(di)
     dj = np.float64(dj)
-    
+    if output == True:
+        print("di in:", di, "dj in:", dj)
     #find distance using the pythagorean theorem
     hypot = np.sqrt((di**2) + (dj**2))
     
     #find the bearing
     angle = np.arctan2(dj, di)
+    if output == True:
+        print("Angle in:", angle)
     
-    return hypot, np.degrees(angle)
+    return hypot, 90- np.degrees(angle)
 
 def add_zero(number):
     """

@@ -173,7 +173,6 @@ for dom in range(0, int(params["max_dom"][0])):
         calculate the edges of the domain.  
         
         """
-        
         #find how may grid points the lower left of the domain we are on is away from the parent domain center
         #number of i grids
         di = (int(params["i_parent_start"][dom]) - dom_cent[parent]["x"]) * dom_cent[parent]["dx"]
@@ -202,7 +201,6 @@ for dom in range(0, int(params["max_dom"][0])):
 
         #add parametrs to the domain
         dom_cent[dom_id] = {"lon" : cent_lon, "lat" : cent_lat, "x":int(int(params["e_we"][dom]) / 2), "y":int(int(params["e_sn"][dom]) / 2), "dx":new_dx, "dy":new_dy}
-    
     
     
     ########################################
